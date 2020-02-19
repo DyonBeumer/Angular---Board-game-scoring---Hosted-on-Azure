@@ -1,28 +1,33 @@
-import { HttpGameDataService } from './Services/http-game-data-service.service';
-import { GameComponent } from './game/game.component';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GameRegistrationFormComponent } from './game-registration-form/game-registration-form.component';
+import { GameRegistrationFormComponent } from './Components/game-registration-form/game-registration-form.component';
+import { GameComponent } from './Components/game/game.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './Services/in-memory-data.service';
+import { HttpGameDataService } from './Services/http-game-data-service.service';
+import { GWTRegistrationFormComponent } from './Components/gwtregistration-form/gwtregistration-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     GameRegistrationFormComponent,
-    GameComponent
+    GameComponent,
+    GWTRegistrationFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

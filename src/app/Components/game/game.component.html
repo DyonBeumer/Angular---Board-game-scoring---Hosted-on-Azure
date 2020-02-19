@@ -1,0 +1,4 @@
+<h1>Available games</h1>
+<select><option [value]="game.name" *ngFor="let game of games | async">{{game.name}}</option></select>
+
+

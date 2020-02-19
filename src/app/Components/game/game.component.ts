@@ -1,8 +1,8 @@
 import { Observable } from 'rxjs';
-import { HttpGameDataService } from './../Services/http-game-data-service.service';
+import { HttpGameDataService } from '../../Services/http-game-data-service.service';
 import { Component, OnInit } from '@angular/core';
-import { InMemoryDataService } from '../Services/in-memory-data.service';
-import { Game } from '../Models/game';
+import { InMemoryDataService } from '../../Services/in-memory-data.service';
+import { Game } from '../../Models/game';
 
 @Component({
   selector: 'app-game',
