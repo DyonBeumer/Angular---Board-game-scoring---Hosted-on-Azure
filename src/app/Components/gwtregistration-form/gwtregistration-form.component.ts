@@ -1,5 +1,6 @@
+import { GeneralGameInfo } from './../../Models/general-game-info';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-gwtregistration-form',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GWTRegistrationFormComponent implements OnInit {
   registrationForm: FormGroup;
+  @Input() generalGameInfo: GeneralGameInfo;
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {

@@ -1,4 +1,24 @@
-<h1>Available games</h1>
-<select><option [value]="game.name" *ngFor="let game of games | async">{{game.name}}</option></select>
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <h1>Available games</h1>
+    <select (change)="gameSelected=($event.target.value)" [ngModel]="gameSelected">
+      <option  *ngFor="let game of games | async">{{game.name}}
+      </option>
+    </select>
 
+    <form [formGroup]="gameRegistrationForm" (ngSubmit)="onSubmit()">
+      <label>Game played on:
+        <input type="date" formControlName="playdate">
+      </label>
+      <label>Number of players:
+        <input type="number" formControlName="playercount" min="1" max="10">
+      </label>
+      <button type="submit" [disabled]="!gameRegistrationForm.valid">Submit</button>
+    </form>
+
+    <div *ngIf="gameSelected === 'Great Western Trail' && generalGameInfo">
+      <app-gwtregistration-form [generalGameInfo]="generalGameInfo"></app-gwtregistration-form>
+    </div>
+  </div>
+</div>
 

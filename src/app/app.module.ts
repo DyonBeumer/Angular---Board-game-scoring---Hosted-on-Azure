@@ -6,7 +6,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GameRegistrationFormComponent } from './Components/game-registration-form/game-registration-form.component';
 import { GameComponent } from './Components/game/game.component';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -19,7 +18,6 @@ import { GWTRegistrationFormComponent } from './Components/gwtregistration-form/
 @NgModule({
   declarations: [
     AppComponent,
-    GameRegistrationFormComponent,
     GameComponent,
     GWTRegistrationFormComponent
   ],

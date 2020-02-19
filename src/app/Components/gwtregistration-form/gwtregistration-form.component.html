@@ -1,1 +1,27 @@
-<p>gwtregistration-form works!</p>
+<div>
+  <h2>GWT Scoring Form</h2>
+  <div><label>Game played on: </label>{{generalGameInfo.playdate}}</div>
+  <div><label>Player Count: </label>{{generalGameInfo.playercount}}</div>
+
+  <!-- Dit moet makkelijker kunnen.. -->
+  <div *ngIf="generalGameInfo.playercount === 2">
+    <div>
+      playername
+      goldpoints
+      buildingspoints
+      deliveriespoints
+      trainstationspoints
+      hazardspoints
+      cowspoints
+      goalspoints
+      stationmastertilespoints
+      hiredpeoplepoints
+      playerboardunlockpoints
+      gamefinisherpoints
+      totalpoints
+    </div>
+  </div>
+  <div *ngIf="generalGameInfo.playercount === 3"></div>
+  <div *ngIf="generalGameInfo.playercount === 4"></div>
+
+</div>
