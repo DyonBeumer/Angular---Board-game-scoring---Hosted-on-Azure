@@ -15,6 +15,7 @@ export class GameComponent implements OnInit {
   gameRegistrationForm: FormGroup;
   games: Observable<Game[]>;
   generalGameInfo: GeneralGameInfo;
+  players: Observable<string[]>;
   gameSelected: '';
 
   ngOnInit() {
@@ -22,6 +23,9 @@ export class GameComponent implements OnInit {
     this.gameRegistrationForm = this.formBuilder.group({
       playdate: ['', Validators.required],
       playercount: ['', [Validators.required, Validators.min(1), Validators.max(10)]]
+    });
+    this.gameRegistrationForm.controls.playercount.valueChanges.subscribe(change => {
+      // Tbd
     });
   }
 
