@@ -1,4 +1,3 @@
-import { GeneralGameInfo } from './../../Models/general-game-info';
 import { FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormTemplate } from './../../Models/gwtscoring_template';
@@ -13,7 +12,6 @@ export class GWTRegistrationFormComponent implements OnInit {
   formTemplate: any = FormTemplate;
   formArray: FormArray;
   // array: Array<number>;
-  @Input() generalGameInfo: GeneralGameInfo;
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {

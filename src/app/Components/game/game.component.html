@@ -19,8 +19,8 @@
       <button type="submit" [disabled]="!gameRegistrationForm.valid">Submit</button>
     </form>
 
-    <div *ngIf="gameSelected === 'Great Western Trail' && generalGameInfo">
-      <app-gwtregistration-form [generalGameInfo]="generalGameInfo"></app-gwtregistration-form>
+    <div *ngIf="gameSelected === 'Great Western Trail'">
+      <app-gwtregistration-form></app-gwtregistration-form>
     </div>
   </div>
 </div>

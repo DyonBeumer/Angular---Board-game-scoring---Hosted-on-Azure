@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { tap, catchError, map } from 'rxjs/operators';
 
-import { Game } from '../Models/game';
+import { Game } from '../Models/game.model';
 
 const cudOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' })};
 
@@ -19,6 +19,9 @@ export class HttpGameDataService {
       catchError(this.handleError)
     );
   }
+
+
+
 
   private handleError(error: any) {
     // In a real world app, we might send the error to remote logging infrastructure

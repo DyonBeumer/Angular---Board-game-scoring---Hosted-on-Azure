@@ -1,4 +1,4 @@
-export interface GWTScoring { // Individual/per player
+export class GWTScoring { // Individual/per player
     goldpoints: number; // 5 Gold = 1 point (rounded down)
     buildingspoints: number;
     deliveriespoints: number;
