@@ -20,8 +20,15 @@ export class HttpGameDataService {
     );
   }
 
+  getGame(id: number) {
+    return this.http.get<Game>(`${this.gamedataUrl}/${id}`).pipe(
+      catchError(this.handleError)
+    );
+  }
 
+  createGame(game: Game) {
 
+  }
 
   private handleError(error: any) {
     // In a real world app, we might send the error to remote logging infrastructure

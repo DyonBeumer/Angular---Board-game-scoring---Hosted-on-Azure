@@ -1,7 +1,7 @@
-export const FormTemplate = [
+export const GWTFormTemplate = [
   {
     type: 'number',
-    label: 'goldpoints'
+    label: 'goldpoints' // 5 Gold = 1 point
   },
   {
     type: 'number',

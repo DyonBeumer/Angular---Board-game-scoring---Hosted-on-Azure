@@ -1,16 +1,24 @@
+import { Database } from './../Models/database.model';
+import { GWTFormTemplate } from './../Models/gwtscoring_template';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Game } from '../Models/game.model';
 import { Injectable } from '@angular/core';
+import { User } from '../Models/user.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    let games = Array<Game>();
-    games = [
-      { gameid: 0, name: '', minallowedplayercount: 0, maxallowedplayercount: 0, scoringtemplate: ''}
+    const games = [
+      new Game(0, '', 0, 0, new Object()),
+      new Game(1, 'Great Western Trail', 2, 4, GWTFormTemplate)
     ];
-    return {games};
+
+    const users = [
+      new User(0, '', '', ''),
+      new User(1, 'Dyon', 'Dyonutborne', 'Dyonunic@gmail.com')
+    ];
+    return {games, users};
   }
 }

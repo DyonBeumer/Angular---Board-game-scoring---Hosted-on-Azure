@@ -1,6 +1,6 @@
 import { FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
 import { Component, OnInit, Input } from '@angular/core';
-import { FormTemplate } from './../../Models/gwtscoring_template';
+import { GWTFormTemplate } from './../../Models/gwtscoring_template';
 
 @Component({
   selector: 'app-gwtregistration-form',
@@ -9,7 +9,7 @@ import { FormTemplate } from './../../Models/gwtscoring_template';
 })
 export class GWTRegistrationFormComponent implements OnInit {
   registrationForm: FormGroup;
-  formTemplate: any = FormTemplate;
+  formTemplate: any = GWTFormTemplate;
   formArray: FormArray;
   // array: Array<number>;
   constructor(private formBuilder: FormBuilder) { }
